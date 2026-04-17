@@ -1,0 +1,8 @@
+.build/
+.swiftpm/
+.DS_Store
+*.pyc
+__pycache__/
+.python-version
+.venv/
+slap-bridge/slap-bridge
