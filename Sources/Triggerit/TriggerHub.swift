@@ -35,7 +35,7 @@ final class TriggerHub: ObservableObject {
         let thr = Thread { [weak self] in
             self?.udpLoop(port: port)
         }
-        thr.name = "HeyAgent.UDP"
+        thr.name = "Triggerit.UDP"
         worker = thr
         thr.start()
 

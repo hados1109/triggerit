@@ -92,7 +92,7 @@ def open_camera_robust(index: int = 0) -> cv2.VideoCapture:
             cap = attempt(alt)
             if cap is not None:
                 print(
-                    f"[heyagent] Camera 0 did not work; opened camera index {alt} instead.",
+                    f"[triggerit] Camera 0 did not work; opened camera index {alt} instead.",
                     file=sys.stderr,
                     flush=True,
                 )

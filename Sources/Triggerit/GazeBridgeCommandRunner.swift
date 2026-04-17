@@ -9,7 +9,7 @@ final class GazeBridgeCommandRunner: ObservableObject {
     func run(arguments: [String]) {
         guard !isRunning else { return }
         guard GazeBridgePaths.gazeBridgeScriptExists else {
-            output = "Could not find python/gaze_bridge.py next to this app’s package root (\(GazeBridgePaths.packageRoot.path)). Open the repo from disk or run from the HeyAgent folder."
+            output = "Could not find python/gaze_bridge.py next to this app’s package root (\(GazeBridgePaths.packageRoot.path)). Open the repo from disk or run from the Triggerit repo root."
             return
         }
 
@@ -28,7 +28,7 @@ final class GazeBridgeCommandRunner: ObservableObject {
         }
     }
 
-    /// Builds CLI arguments after `gaze_bridge.py` (profile empty = default `~/.heyagent/gaze_model.pkl`).
+    /// Builds CLI arguments after `gaze_bridge.py` (profile empty = default `~/.triggerit/gaze_model.pkl`).
     static func gazeArgs(profile: String?, camera: Int? = nil, extra: [String]) -> [String] {
         var out: [String] = []
         let p = profile?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
@@ -46,7 +46,7 @@ final class GazeBridgeCommandRunner: ObservableObject {
         let proc = Process()
         proc.currentDirectoryURL = cwd
 
-        proc.environment = ProcessEnvHeyAgent.withHomebrewPrefixes()
+        proc.environment = ProcessEnvTriggerit.withHomebrewPrefixes()
 
         proc.executableURL = URL(fileURLWithPath: "/usr/bin/env")
         proc.arguments = ["uv", "run", "python", "gaze_bridge.py"] + gazeArguments

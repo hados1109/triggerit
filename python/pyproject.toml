@@ -1,7 +1,7 @@
 [project]
-name = "heyagent-gaze"
+name = "triggerit-gaze"
 version = "0.1.0"
-description = "UDP gaze bridge for HeyAgent (EyeTrax primary)"
+description = "UDP gaze bridge for Triggerit (EyeTrax primary)"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

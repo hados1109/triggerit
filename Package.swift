@@ -2,17 +2,17 @@
 import PackageDescription
 
 let package = Package(
-    name: "HeyAgent",
+    name: "Triggerit",
     platforms: [
         .macOS(.v14),
     ],
     products: [
-        .executable(name: "HeyAgent", targets: ["HeyAgent"]),
+        .executable(name: "Triggerit", targets: ["Triggerit"]),
     ],
     targets: [
         .executableTarget(
-            name: "HeyAgent",
-            path: "Sources/HeyAgent"
+            name: "Triggerit",
+            path: "Sources/Triggerit"
         ),
     ]
 )

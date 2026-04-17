@@ -12,7 +12,7 @@ struct ContentView: View {
         ZStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
-                    Text("HeyAgent — Phase 1")
+                    Text("Triggerit — Phase 1")
                         .font(.title2.weight(.semibold))
 
                     Text(

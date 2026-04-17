@@ -1,4 +1,4 @@
-// slap-bridge forwards Apple Silicon laptop impacts to the HeyAgent HUD over UDP.
+// slap-bridge forwards Apple Silicon laptop impacts to the Triggerit HUD over UDP.
 // Sensor + detector logic mirrors github.com/taigrr/spank (MIT) but omits audio.
 package main
 

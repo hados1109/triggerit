@@ -8,9 +8,9 @@ uv sync
 uv run python gaze_bridge.py --udp-port 19722
 ```
 
-First run: choose calibration (`dense` recommended for accuracy). Model is saved to `~/.heyagent/gaze_model.pkl` by default.
+First run: choose calibration (`dense` recommended for accuracy). Model is saved to `~/.triggerit/gaze_model.pkl` by default.
 
-**Multiple setups:** use `--profile office` (stores `~/.heyagent/gaze_models/office.pkl`). Each calibration also writes `office.samples.npz` so you can run **`--append-calibration`** later to merge another session (e.g. different lighting) into one model. **`--list-profiles`** shows saved profiles and sample counts.
+**Multiple setups:** use `--profile office` (stores `~/.triggerit/gaze_models/office.pkl`). Each calibration also writes `office.samples.npz` so you can run **`--append-calibration`** later to merge another session (e.g. different lighting) into one model. **`--list-profiles`** shows saved profiles and sample counts.
 
 ## Flags
 
@@ -20,7 +20,7 @@ First run: choose calibration (`dense` recommended for accuracy). Model is saved
 | `--udp-port` | 19722 | Must match Swift listener |
 | `--camera` | 0 | OpenCV camera index |
 | `--model` | (see below) | Explicit path to `.pkl`; overrides `--profile` |
-| `--model-dir` | ~/.heyagent/gaze_models | Where `--profile NAME` saves `NAME.pkl` |
+| `--model-dir` | ~/.triggerit/gaze_models | Where `--profile NAME` saves `NAME.pkl` |
 | `--profile` | (unset) | Named model: `<model-dir>/NAME.pkl` |
 | `--calibration` | dense | `dense`, `9`, or `5` |
 | `--dense-rows` / `--dense-cols` | 5 / 5 | Dense grid shape (with `--calibration dense`) |
@@ -37,7 +37,7 @@ First run: choose calibration (`dense` recommended for accuracy). Model is saved
 | `--aoi-w` | 0.22 | AOI width |
 | `--aoi-h` | 0.18 | AOI height |
 
-If neither `--model` nor `--profile` is set, the default path is `~/.heyagent/gaze_model.pkl` (same as before).
+If neither `--model` nor `--profile` is set, the default path is `~/.triggerit/gaze_model.pkl`.
 
 ### Profile + append examples
 

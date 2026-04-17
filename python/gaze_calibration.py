@@ -1,5 +1,5 @@
 """
-EyeTrax calibration sample collection + merged training for HeyAgent.
+EyeTrax calibration sample collection + merged training for Triggerit.
 
 EyeTrax's bundled calibration routines train immediately and do not return
 samples. We duplicate the capture flow using the same helpers so we can:

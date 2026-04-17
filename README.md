@@ -1,4 +1,4 @@
-# HeyAgent — Phase 1 attention triggers
+# Triggerit — Phase 1 attention triggers
 
 Native **SwiftUI HUD** plus two **UDP JSON** producers:
 
@@ -8,8 +8,8 @@ Native **SwiftUI HUD** plus two **UDP JSON** producers:
 ## Run the HUD
 
 ```bash
-cd "/Users/vinyas/Cursor projects/HeyAgent"
-swift run HeyAgent
+cd triggerit   # repository root
+swift run Triggerit
 ```
 
 Grant nothing special for Swift; it only **listens** on UDP `19722` by default.

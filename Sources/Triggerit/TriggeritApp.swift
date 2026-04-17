@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct HeyAgentApp: App {
+struct TriggeritApp: App {
     @StateObject private var hub = TriggerHub()
     @StateObject private var gazeRunner = GazeBridgeCommandRunner()
     @StateObject private var bridge = BridgeSupervisor()

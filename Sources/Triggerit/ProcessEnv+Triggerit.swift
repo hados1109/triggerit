@@ -1,6 +1,6 @@
 import Foundation
 
-enum ProcessEnvHeyAgent {
+enum ProcessEnvTriggerit {
     /// Prepends common Homebrew locations so `uv` / `go` resolve when the app is not started from a login shell.
     static func withHomebrewPrefixes(_ base: [String: String] = ProcessInfo.processInfo.environment) -> [String: String] {
         var env = base

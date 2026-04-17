@@ -2,7 +2,7 @@
 
 ## Gaze (EyeTrax + `gaze_bridge.py`)
 
-- [ ] **Calibration**: dense (default) completes without abort; model saved under `~/.heyagent/gaze_model.pkl` (or `--profile NAME` → `~/.heyagent/gaze_models/NAME.pkl` plus optional `NAME.samples.npz` for `--append-calibration`).
+- [ ] **Calibration**: dense (default) completes without abort; model saved under `~/.triggerit/gaze_model.pkl` (or `--profile NAME` → `~/.triggerit/gaze_models/NAME.pkl` plus optional `NAME.samples.npz` for `--append-calibration`).
 - [ ] **True positive**: while looking at the **camera / menu-bar band**, HUD shows `gaze_trig` roughly within `dwell` seconds (default 0.45 s) and respects `cooldown` (default 1.25 s).
 - [ ] **False negative rate**: acceptable under your normal desk lighting; if poor, reduce `--ema-alpha` (snappier) or widen AOI (`--aoi-w`, `--aoi-h`).
 - [ ] **False positive rate**: reading keyboard/dock should not spam triggers; if it does, raise `--dwell`, narrow AOI, or re-calibrate.

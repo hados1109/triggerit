@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-HeyAgent gaze → UDP JSON for the Swift HUD.
+Triggerit gaze → UDP JSON for the Swift HUD.
 Primary path: EyeTrax (dense/9p calibration, optional filters).
 
 Models:
-  Default file: ~/.heyagent/gaze_model.pkl
-  Named profiles: ~/.heyagent/gaze_models/<name>.pkl (+ <name>.samples.npz for append)
+  Default file: ~/.triggerit/gaze_model.pkl
+  Named profiles: ~/.triggerit/gaze_models/<name>.pkl (+ <name>.samples.npz for append)
 """
 
 from __future__ import annotations
@@ -55,7 +55,7 @@ def resolve_model_path(args: argparse.Namespace) -> Path:
     if args.profile is not None:
         d = Path(args.model_dir).expanduser().resolve()
         return (d / f"{args.profile}.pkl").resolve()
-    return (Path.home() / ".heyagent" / "gaze_model.pkl").resolve()
+    return (Path.home() / ".triggerit" / "gaze_model.pkl").resolve()
 
 
 def list_profiles_action(model_dir: Path) -> int:
@@ -83,7 +83,7 @@ def list_profiles_action(model_dir: Path) -> int:
 
 
 def run() -> int:
-    p = argparse.ArgumentParser(description="EyeTrax → HeyAgent UDP gaze bridge")
+    p = argparse.ArgumentParser(description="EyeTrax → Triggerit UDP gaze bridge")
     p.add_argument("--udp-host", default="127.0.0.1")
     p.add_argument("--udp-port", type=int, default=19_722)
     p.add_argument("--camera", type=int, default=0)
@@ -96,7 +96,7 @@ def run() -> int:
     p.add_argument(
         "--model-dir",
         type=Path,
-        default=Path.home() / ".heyagent" / "gaze_models",
+        default=Path.home() / ".triggerit" / "gaze_models",
         help="Directory for named --profile models",
     )
     p.add_argument(

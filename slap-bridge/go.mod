@@ -1,4 +1,4 @@
-module github.com/vinyas/heyagent/slap-bridge
+module github.com/hados1109/triggerit/slap-bridge
 
 go 1.26
 

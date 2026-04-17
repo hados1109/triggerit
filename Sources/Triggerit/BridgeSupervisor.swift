@@ -76,7 +76,7 @@ final class BridgeSupervisor: ObservableObject {
 
         let proc = Process()
         proc.currentDirectoryURL = GazeBridgePaths.pythonDirectory
-        proc.environment = ProcessEnvHeyAgent.withHomebrewPrefixes()
+        proc.environment = ProcessEnvTriggerit.withHomebrewPrefixes()
         proc.executableURL = URL(fileURLWithPath: "/usr/bin/env")
         proc.arguments = ["uv", "run", "python", "gaze_bridge.py"] + args
 
@@ -143,7 +143,7 @@ final class BridgeSupervisor: ObservableObject {
         proc.waitUntilExit()
         if proc.terminationStatus != 0 {
             throw NSError(
-                domain: "HeyAgent",
+                domain: "Triggerit",
                 code: Int(proc.terminationStatus),
                 userInfo: [NSLocalizedDescriptionKey: "osascript exited with status \(proc.terminationStatus)"]
             )

@@ -1,6 +1,6 @@
 import Foundation
 
-/// Resolves the HeyAgent repo root from this source file’s location (`…/Sources/HeyAgent/…`).
+/// Resolves the Triggerit repo root from this source file’s location (`…/Sources/Triggerit/…`).
 enum GazeBridgePaths {
     private static var agentSourcesDirectory: URL {
         URL(fileURLWithPath: #filePath).deletingLastPathComponent()
